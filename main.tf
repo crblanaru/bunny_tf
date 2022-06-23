@@ -8,8 +8,14 @@ terraform {
 }
 
 resource "random_string" "random" {
-  length           = 16
+  length           = var.length
   special          = false
+}
+
+variable "length" {
+    type = number
+    default = 10
+  
 }
 
 output "db_key" {
