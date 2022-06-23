@@ -14,6 +14,8 @@ resource "random_string" "random" {
 
 variable "length" {
     type = number
+    default = 10
+  
 }
 
 output "db_key" {
